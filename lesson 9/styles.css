@@ -1,0 +1,458 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/**********General Styles**********/
+html, body {
+	background:#fff url(images/wave-3473335_1280.jpg) no-repeat top center;
+	font:11pt Arial, Helvetica, sans-serif;
+	color: #000;
+	margin:0;
+	padding:0;
+}
+
+img {
+	border:0;
+}
+
+#container {
+	width:100%;
+	margin:0 auto;
+}
+
+#wrapper {
+	width:841px;
+	margin:0 auto;
+	position:relative;
+}
+
+#nav > a img {
+    margin-left: -4px;
+}
+
+#nav {
+    margin-bottom: -4px;
+}
+
+#nav img:nth-of-type(2) {
+    margin-left: -4px;
+}
+
+a, a:visited {
+	color:#134f8b;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#000;
+}
+
+.listpadright {padding-right:20px;}
+
+.left {float:left;}
+.right {float:right;}
+.clear {clear: both;}
+
+.twenty {width:19%;}
+.thirty {width:29%;}
+.forty {width:39%;}
+.fortyfive {width:44%;}
+.fortyeight {width:47%;}
+.fifty {width:49%;}
+.sixty {width:59%;}
+.seventy {width:69%;}
+.eighty {width:79%;}
+.hundred {width:99%;}
+
+.nodisplay { display:none; }
+
+.bottom_border {border-bottom:1px solid #e99b1f; padding-bottom:5px;}
+
+.button_listing img {
+	margin-bottom:10px;
+	margin-right:5px;
+}
+
+.hide {
+	display:none;
+}
+
+
+@font-face {
+	font-family: univers;
+    src: url('Univers55.ttf');
+}
+
+h1 {
+	color:#d1491f;
+	/*font-family:Arial, Helvetica, sans-serif;*/
+	font-family:Tahoma, Geneva, sans-serif;
+	/*font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;*/
+	font-size:28px;
+	font-weight:600;
+	line-height:28px;
+}
+
+h2 {
+	color:#d1491f;
+	/*font-family:Arial, Helvetica, sans-serif;*/
+	font-family:Tahoma, Geneva, sans-serif;
+	/*font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;*/
+	font-size:24px;
+	font-weight:normal;
+}
+
+h3 {
+	font-size:13pt;
+	text-decoration:underline;
+}
+
+.smalltext_red {font-size:9pt;color:#ff0000;}
+	
+
+/**********Header**********/
+#header {
+	padding-top:24px;
+}
+
+.main_img {
+	width:801px;
+}
+
+.fadein { position:relative; height:536px; width:801px; }
+.fadein img { position:absolute; left:0; top:0; }
+
+.sidebar_left {
+	width:22px;
+}
+
+.sidebar_right {
+	width:17px;
+}
+
+#choose_pleasure {
+	position:absolute;
+	top:30px;
+	left:320px;
+	width:200px;
+}
+
+/**********Content**********/
+.content_left {
+	width:599px;
+	margin-left:22px;
+	position:relative;
+	padding-right:10px;
+}
+
+.content_right {
+	width:183px;
+	margin:0 17px 0 5px;
+}
+
+.show_hide, .show_hidelb, .show_hidelb2, .show_hidelb3, .show_hidelb4, .show_hidelb5, .show_hidelb6, .show_hidelb7, .show_hidelb8, .show_hidelb9 {
+	display:none;
+}
+
+.pointer {
+	cursor:pointer;
+	font-weight:bold;
+}
+
+.details_photo {max-width: 100%;}
+/******************************************** Local Business Sliding Categories **********************************************/
+#categories.expander { margin:0 0 0 15px; padding:0; }
+#categories.expander div { padding-bottom:0; }
+#categories.expander p.maincat { display:block; color:#134f8b; cursor:pointer; font-weight:bold; }
+#categories.expander span {  }
+#categories.expander div.subcat { display:none; }
+#categories.expander div.subcat span { color:#134f8b; cursor:pointer; display:block; }
+
+/********** Pagination **********/
+.results {
+	font-weight:bold;
+	color:#006;
+	position:relative;
+	top:-5px;
+}
+
+.paginate {
+font-family:Arial, Helvetica, sans-serif;
+	padding: 3px;
+	margin: 10px 0 10px 3px;
+}
+
+.paginate a {
+	padding:2px 5px 2px 5px;
+	margin:2px;
+	border:1px solid #134f8b;
+	text-decoration:none;
+	color: #134f8b;
+}
+.paginate a:hover, .paginate a:active {
+	border: 1px solid #999;
+	color: #000;
+}
+.paginate span.current {
+    margin: 2px;
+	padding: 2px 5px 2px 5px;
+		border: 1px solid #134f8b;
+		
+		font-weight: bold;
+		background-color: #134f8b;
+		color: #FFF;
+	}
+	.paginate span.disabled {
+		padding:2px 5px 2px 5px;
+		margin:2px;
+		border:1px solid #eee;
+		color:#DDD;
+	}
+
+/**********Visitor Info - Beach Wedding**********/
+a.wedding_guide {color:#134f8b;font-weight:bold;text-decoration:underline;font-size:13pt;}
+a:hover.wedding_guide {text-decoration:none;}
+
+
+/**********Keyword Searchbox**********/
+.keyword_searchbox {
+	padding:10px;
+	background:#d6d6d6;
+	width:90%;
+	margin-bottom:10px;
+}
+
+
+/**********Where To Eat**********/
+.eat_searchbox {
+	padding:10px;
+	background:#ededed;
+	width:90%;
+}
+
+.profile_form {
+	padding:10px;
+	width:90%;
+}
+
+/**********Where To Play**********/
+.play_searchbox {
+	padding:10px;
+	background:#ededed;
+	width:90%;
+}
+
+/**********Where To Stay**********/
+.stay_searchbox {
+	padding:10px;
+	background:#ededed;
+	width:90%;
+}
+
+/**********Eat, Play, Stay Establishment list, Local Businesses**********/
+.listing {
+	position:absolute;
+	top:240px;
+	left:0;
+}
+
+.absolutezero {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+
+.ltgray {
+	padding:10px;
+	background:#ededed;
+	width:46%;
+	height:90px;
+}
+
+.dkgray {
+	padding:10px;
+	background:#d6d6d6;
+	width:46%;
+	height:90px;
+}
+
+.biz {
+	margin-bottom:10px;
+}
+
+.biz_category {
+	border-bottom:1px solid #e99b1f;
+	height:22px;
+}
+
+.biz_category span {
+	background:#e99b1f;
+	font-weight:bold;
+	padding:5px 10px;
+	color:#FFF;
+}
+
+a.biz_link, a.biz_link:visited {
+	font-weight:bold;
+	color:#134f8b;
+	text-decoration:none;
+}
+
+a.biz_link:hover {
+	color:#000;
+}
+
+/**********Local Businesses**********/
+.biz_searchbox {
+	padding:10px;
+	background:#ededed;
+	width:90%;
+}
+
+/**********Member Directory**********/
+.letters {
+	background:#e99b1f;
+	font-weight:bold;
+	padding:5px;
+	margin-right:3px;
+	width:24px;
+	display:inline;
+}
+
+.letters a, .letters a:visited {
+	color:#FFF;
+	text-decoration:none;
+}
+
+/**********Member Directory - Related Links**********/
+#member_related_links {
+	width:163px;
+	padding:10px;
+	background:#fdb33e;
+	margin-bottom:20px;
+}
+
+/**********Members Only**********/
+#signin {
+	padding:5px;
+	background:#ededed;
+}
+
+#register {
+	padding:5px;
+	background:#d6d6d6;
+	margin-left:10px;
+}
+
+/**********Sign Up - Updates**********/
+#signup_updates {
+	width:163px;
+	padding:10px;
+	background:#d1491f;
+	margin-bottom:20px;
+}
+
+/**********What's Happening**********/
+.calendar {
+	background:#999;
+	padding:10px;
+	border:1px solid #000;
+}
+
+.calendar table th  {
+	color:#fff;
+}
+
+.calendar table tr td  {
+	border:1px solid #000;
+	height:50px;
+	background:#fff;
+}
+
+a.cal_link {
+	font-size:9pt;
+	margin-bottom:10px;
+	display:block;
+	padding-top:5px;
+}
+
+/**********Homepage - Main Events**********/
+#main_events {
+	width:280px;
+	padding:10px;
+	background:#fdb33e;
+	margin-bottom:20px;
+}
+
+#main_events p {
+	border-top:1px solid #fff;
+	padding-top:10px;
+}
+
+/**********Sidebar**********/
+.sidebar_nav {
+	background:#fdb33e;
+	width:167px;
+	/*height:520px;*/
+	padding:8px;
+	margin-bottom:20px;
+}
+
+.sidebar_nav p {
+	margin:15px 0;
+	color:#FFF;
+	font-weight:bold;
+	font-size:13pt;
+}
+
+.sidebar_nav a, .sidebar_nav a:visited {
+	color:#000;
+	text-decoration:none;
+	font-size:14px;
+}
+
+.sidebar_nav a:hover {
+	text-decoration:underline;
+}
+
+.sidebar_nav p.myvisit {
+	color:#000;
+}
+
+/**********Google Search **********/
+td.gsc-clear-button  { display: none !important; }
+
+
+/**********Contact Us**********/
+
+.required {
+	color:#ff0000;
+	font-weight:bold;
+}
+
+/**********Footer**********/
+#footer {
+	font-size:8pt;
+	margin:10px 0;
+	position:relative;
+}
+
+#footer_links {
+	background:#fdb33e;
+	line-height:30px;
+	padding:0 10px;
+	margin:0 0 10px 0;
+}
+
+
+.fan_box .profileimage, .page_stream img   {display:none;}
+
+/********** by-line ***************/
+.byline {width:160px;height:34px;text-transform:none;position:absolute;bottom:8px;right:0; font:13px Arial, Helvetica, sans-serif !important;}
+.byline div.byline_big {width:149px;margin:0;padding:0;position:absolute;top:0;left:0;font-weight:bold;text-align:right;}
+.byline img {position:absolute;top:15px;right:0;padding-left:5px;}
+.byline .byline_small {position:relative;top:0px;font-size:9px;font-weight:bold;}
+.byline a, .byline a:visited {font:13px Arial, Helvetica, sans-serif !important;font-weight:bold !important;}
+.byline a:hover {}
+
