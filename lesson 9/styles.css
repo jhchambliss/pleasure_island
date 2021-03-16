@@ -11,31 +11,40 @@ html, body {
 	padding:0;
 }
 
-img {
-	border:0;
-}
-
 #container {
 	width:100%;
 	margin:0 auto;
 }
 
 #wrapper {
-	width:841px;
+	width:840px;
 	margin:0 auto;
-	position:relative;
+	position:relative;	
+	display: grid;
+	grid-template-columns: 2fr 2fr 1fr;
+	grid-template-rows: 10% auto auto auto auto 5%;
+	grid-template-areas: 
+		"title title title"
+		"nav nav nav"
+		"image image image"
+		"content content sidebar"
+		"events cards sidebar"
+		"footer footer footer";
 }
 
-#nav > a img {
-    margin-left: -4px;
+.title {
+	grid-area: title;
 }
 
 #nav {
-    margin-bottom: -4px;
+	grid-area: nav;
+	display: flex;
 }
-
-#nav img:nth-of-type(2) {
-    margin-left: -4px;
+#nav > a {	
+	background-color: white;
+	padding: .5em 1em;
+	border-radius: 5px;
+	margin: .25em;
 }
 
 a, a:visited {
@@ -49,21 +58,6 @@ a:hover {
 
 .listpadright {padding-right:20px;}
 
-.left {float:left;}
-.right {float:right;}
-.clear {clear: both;}
-
-.twenty {width:19%;}
-.thirty {width:29%;}
-.forty {width:39%;}
-.fortyfive {width:44%;}
-.fortyeight {width:47%;}
-.fifty {width:49%;}
-.sixty {width:59%;}
-.seventy {width:69%;}
-.eighty {width:79%;}
-.hundred {width:99%;}
-
 .nodisplay { display:none; }
 
 .bottom_border {border-bottom:1px solid #e99b1f; padding-bottom:5px;}
@@ -75,12 +69,6 @@ a:hover {
 
 .hide {
 	display:none;
-}
-
-
-@font-face {
-	font-family: univers;
-    src: url('Univers55.ttf');
 }
 
 h1 {
@@ -113,10 +101,11 @@ h3 {
 /**********Header**********/
 #header {
 	padding-top:24px;
+	grid-area: title;
 }
 
 .main_img {
-	width:801px;
+	grid-area: image;
 }
 
 .fadein { position:relative; height:536px; width:801px; }
@@ -143,11 +132,13 @@ h3 {
 	margin-left:22px;
 	position:relative;
 	padding-right:10px;
+	grid-area: content;
 }
 
 .content_right {
 	width:183px;
 	margin:0 17px 0 5px;
+	grid-area: sidebar;
 }
 
 .show_hide, .show_hidelb, .show_hidelb2, .show_hidelb3, .show_hidelb4, .show_hidelb5, .show_hidelb6, .show_hidelb7, .show_hidelb8, .show_hidelb9 {
@@ -383,11 +374,24 @@ a.cal_link {
 	padding:10px;
 	background:#fdb33e;
 	margin-bottom:20px;
+	grid-area: events;
 }
 
 #main_events p {
 	border-top:1px solid #fff;
 	padding-top:10px;
+}
+
+/**********Cards***********/
+#cards {
+	grid-area: cards;
+}
+
+#cards img {
+	display:block;
+	margin:0px 11px 10px;
+	width: 255px;
+	height: 188px;
 }
 
 /**********Sidebar**********/
@@ -397,6 +401,7 @@ a.cal_link {
 	/*height:520px;*/
 	padding:8px;
 	margin-bottom:20px;
+	grid-area: sidebar;
 }
 
 .sidebar_nav p {
@@ -436,6 +441,7 @@ td.gsc-clear-button  { display: none !important; }
 	font-size:8pt;
 	margin:10px 0;
 	position:relative;
+	grid-area: footer;
 }
 
 #footer_links {
