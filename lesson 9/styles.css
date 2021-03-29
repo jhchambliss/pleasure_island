@@ -5,7 +5,9 @@
 /**********General Styles**********/
 html, body {
 	background:#fff url(images/wave-3473335_1280.jpg) no-repeat top center;
-	font:11pt Arial, Helvetica, sans-serif;
+	font-size:11pt;
+	font-family: 'Rajdhani', sans-serif;
+	font-weight: 500;
 	color: #000;
 	margin:0;
 	padding:0;
@@ -32,24 +34,59 @@ html, body {
 		"footer footer footer";
 }
 
+input#mobile_menu {
+	display: none;
+}
+
+#hamburger_menu label {
+	cursor: pointer;
+	display: block;
+	width: 42px;
+	height: 42px;
+	background: #e99b1f url(images/menu.svg) no-repeat center center;
+	background-size: 22px auto;
+	position: absolute;
+	top: 20px;
+	right: -42px;	
+	border-radius: 0 10px 10px 0;
+}
+
+#hamburger {
+	visibility: hidden;
+}
+
 #nav {
 	grid-area: nav;
 	display: flex;
+	margin: 1em auto;
+	justify-content: center;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 60%);
+	align-items: center;
 }
+
 #nav > a {	
-	background-color: white;
-	padding: .5em 1em;
-	border-radius: 5px;
-	margin: .25em;
+	padding: .3em 1em;
+	margin: .5em;
+	font-size: 1.35em;
+	font-family: 'Passion One', cursive;
+	font-weight: 400;
+	letter-spacing: 2px;
 }
 
 a, a:visited {
-	color:#134f8b;
+	color:#000075;
 	text-decoration:none;
+	font-weight: 600;
 }
 
 a:hover {
 	color:#000;
+	font-weight: 700;
+}
+
+#nav a:hover {
+	text-decoration: underline;
 }
 
 .listpadright {padding-right:2em;}
@@ -66,6 +103,8 @@ a:hover {
 .hide {
 	display:none;
 }
+
+.clear {clear: both;}
 
 h1 {
 	color:#d1491f;
@@ -98,6 +137,7 @@ h3 {
 
 .main_img {
 	grid-area: image;
+	margin: 0 auto;
 }
 
 .fadein { position:relative;} /*  height:536px; width:801px;  */
@@ -118,6 +158,10 @@ figure {
 	display: none;
 }
 
+figcaption p {
+	line-height: 1;
+}
+
 /**********Content**********/
 .content_left {
 	margin-left:2em;
@@ -132,6 +176,18 @@ figure {
 	grid-area: sidebar;
 }
 
+img.divider {
+	width: 80%; 
+	height: 1px;
+	margin: 0 auto;
+	display: block;
+}
+
+.social {
+	width: 168px;
+	height: 50px;
+}
+
 .show_hide, .show_hidelb, .show_hidelb2, .show_hidelb3, .show_hidelb4, .show_hidelb5, .show_hidelb6, .show_hidelb7, .show_hidelb8, .show_hidelb9 {
 	display:none;
 }
@@ -142,6 +198,14 @@ figure {
 }
 
 .details_photo {max-width: 100%;}
+
+input#keyword  {
+	width: 70%;
+}
+
+select#jumpMenu {
+	width:165px;
+}
 
 /****************** Local Business Sliding Categories *******************/
 #categories.expander { 
@@ -377,7 +441,7 @@ a.cal_link {
 
 /**********Homepage - Main Events**********/
 #main_events {
-	background:#fdb33e;
+	background:#FDE9C9;
 	margin-bottom:20px;
 	grid-area: events;
 }
@@ -401,7 +465,7 @@ a.cal_link {
 
 /**********Sidebar**********/
 .sidebar_nav {
-	background:#fdb33e;
+	background:#FDE9C9;
 	grid-area: sidebar;
 }
 
@@ -456,18 +520,97 @@ td.gsc-clear-button  { display: none !important; }
 .fan_box .profileimage, .page_stream img   {display:none;}
 
 /********** by-line ***************/
-.byline {width:160px;height:34px;text-transform:none;position:absolute;bottom:8px;right:0; font:13px Arial, Helvetica, sans-serif !important;}
-.byline div.byline_big {width:149px;margin:0;padding:0;position:absolute;top:0;left:0;font-weight:bold;text-align:right;}
-.byline img {position:absolute;top:15px;right:0;padding-left:5px;}
-.byline .byline_small {position:relative;top:0px;font-size:9px;font-weight:bold;}
-.byline a, .byline a:visited {font:13px Arial, Helvetica, sans-serif !important;font-weight:bold !important;}
-.byline a:hover {}
+.byline {
+	width:160px;
+	height:34px;
+	text-transform:none;
+	position:absolute;
+	bottom:8px;
+	right:0; 
+	font:13px Arial, Helvetica, sans-serif !important;}
+
+.byline div.byline_big {
+	width:149px;
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:0;
+	left:0;
+	font-weight:bold;
+	text-align:right;
+}
+
+.byline img {
+	position:absolute;
+	top:15px;
+	right:0;
+	padding-left:5px;
+}
+
+.byline .byline_small {
+	position:relative;
+	top:0px;
+	font-size:9px;
+	font-weight:bold;
+}
+
+.byline a, .byline a:visited {
+	font:13px Arial, Helvetica, sans-serif !important;
+	font-weight:bold !important;
+}
+
+#main_events > p {
+	padding: .5em 1.5em;
+}
+
+#main_events img {
+	display: block;
+	margin: 0 auto;
+}
+
+.sidebar_nav p {
+	margin-left: .5em;
+	margin-right: .5em;
+}
+
+.sidebar_nav img {
+	display: block;
+	margin: 0 auto;
+}
+
+input#keyword  {
+	margin-left: .5em;
+}
+
+select#jumpMenu, input#email {
+	margin-left: .5em;
+}
+
+.sidebar_nav {
+	padding-bottom: .5em;
+}
+
+input#email {
+	width: 80%;
+}
+
+#footer_links {
+	text-align: center;
+}
+
+#footer_links a {
+	padding: .5em 1em;
+}
 
 @media (max-width: 899px) {
 
 	#wrapper {
 		width: 100%;
 		margin: 0;
+	}
+
+	.title {
+		margin: 0 auto;
 	}
 
 	iframe {
@@ -483,13 +626,38 @@ td.gsc-clear-button  { display: none !important; }
 	figure > img {
 		width: 100%;
 	}
+
+	#main_events img {
+		width: 90%;
+	}
+
+	.sidebar_nav {
+		width: 100%;
+		padding-bottom: .1em;
+	}
+
+	.sidebar_nav img {
+		width: 90%;
+	}
+
+	input#keyword  {
+		width: 60%;
+	}
+
+	select#jumpMenu {
+		width: 80%;
+	}
+
+	#footer_links a {
+		padding: 1em 1.5em;
+	}
 }
 
 @media (max-width: 774px) {
 
 	#wrapper {
 		grid-template-columns: 2fr 1fr;
-		grid-template-rows: 10% auto auto auto auto 5%;
+		grid-template-rows: auto auto auto auto auto 5%;
 		grid-template-areas: 
 			"title title"
 			"nav nav"
@@ -505,8 +673,8 @@ td.gsc-clear-button  { display: none !important; }
 		margin: 0;
 	}
 
-	#main_events > p {
-		padding-left: .5em;
+	a:hover {
+		font-weight: 600;
 	}
 
 	.content_right {
@@ -517,9 +685,140 @@ td.gsc-clear-button  { display: none !important; }
 		padding: 0;
 	}
 
-	.sidebar_nav {
-		width: 100%;
+	#cards img {
+		margin: 1em auto;
 	}
+
+	img.social {
+		height: 80%;
+	}
+
+	#signup_updates {
+		width: 100%;
+		padding: 0;
+		margin: 1em auto;
+	}
+
+	#signup_updates p, #signup_updates form {
+		margin-left: .5em;
+	}
+
+}
+
+@media (max-width:609px) {
+
+	html, body {
+		background:#fff url(images/wave_mobile.jpg) no-repeat top center;
+	}
+
+	#hamburger {
+		visibility: visible;
+	}
+
+	input#mobile_menu:checked + #hamburger_menu {
+		left: 0;
+	}
+
+	input#mobile_menu:checked + #hamburger_menu label {
+		background-image: url(images/menu_close.svg);
+	}
+
+	#hamburger_menu {
+		width: 180px;
+		background-color: #e99b1f;
+		padding: 10px 20px 10px 25px;
+		color: #fff;
+		box-sizing: border-box;
+		position: absolute;
+		top: 30px;
+		left: -180px;
+	}
+
+	#nav {
+		display: none;
+	}
+
+	.title img {
+		width: 80%;
+		position: relative;
+		left: 15%;
+	}
+
+	#nav {
+		flex-wrap: wrap;
+		width: 80%;
+		margin: 0 auto;
+		background-color: transparent;
+	}
+
+	#hamburger_menu a {
+		display: block;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 60%);
+		margin-bottom: .5em;
+		padding: .7em .5em;
+		border-radius: 5px 0 5px 0;
+	}
+
+	figcaption {
+		background-color: rgba(255, 255, 255, 80%);
+	}
+
+	.content_left {
+		margin-left: .5em;
+	}
+
+	.content_right {
+		margin-right: 1em;
+	}
+
+	#cards img {
+		width: 90%;
+	}
+
+	#footer_links a {
+		font-size: 1.5em;
+		display: block;
+		margin-left: 1em;
+		padding: .2em .5em;
+	}
+	
+	/* This is giving me different results on different emulators (Firefox v Chrome) */
+	.byline {
+		bottom: -300px;
+	}
+
+	.copyright {
+		margin-left: .5em;
+		width: 50%;
+	}
+}
+
+@media (max-width: 460px) {
+
+	#wrapper {
+		grid-template-columns: 60% 40%;
+		grid-template-rows: auto auto auto auto auto 5%;
+		grid-template-areas: 
+			"title title"
+			"nav nav"
+			"image image"
+			"content sidebar"
+			"cards events"
+			"footer footer";
+	}
+
+	#main_events p {
+		margin-left: .2em;
+		margin-right: .2em;
+		padding-left: .5em;
+		padding-right: .5em;
+	}
+
+	.content_left h1 {
+		background-color: rgba(255, 255, 255, 80%);
+	}
+
 }
 
 
